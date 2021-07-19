@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+	<hibernate-mapping>
+	   <class name="com.hibernatedemo2.hibernate.Employee.Employee" table="Employee">
+	      <id name="empNo" column="Emp_No">
+	      <generator class="seqhilo">
+	      <param name="sequence">empseq</param>
+	      <param name="max_lo">3</param>
+	      </generator>
+	      
+	      </id>
+	      <property name="empName" column="Emp_Name" />
+	      <property name="empSal" column="Emp_Sal" />	   
+	   </class>
+	</hibernate-mapping>
